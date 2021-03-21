@@ -6,7 +6,13 @@ registerApplication({
     System.import(
       "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
     ),
-  activeWhen: ["/"],
+  activeWhen: (location) => location.pathname === "/",
+});
+
+registerApplication({
+  name: "@mc/react-single",
+  app: () => System.import("@mc/react-single"),
+  activeWhen: (location) => location.pathname === "/react-single",
 });
 
 // registerApplication({
