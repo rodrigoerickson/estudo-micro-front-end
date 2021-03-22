@@ -15,6 +15,11 @@ registerApplication({
   activeWhen: (location) => location.pathname === "/react-single",
 });
 
+registerApplication({
+  name: "@mc/react-multiples",
+  app: () => System.import("@mc/react-multiples"),
+  activeWhen: ["/react-multiples"],
+});
 // registerApplication({
 //   name: "@mc/navbar",
 //   app: () => System.import("@mc/navbar"),
